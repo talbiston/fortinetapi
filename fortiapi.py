@@ -7,9 +7,8 @@ from datetime import datetime, timedelta
 from getpass import getpass
 
 API_USER = 'CloudSmartz-RW'
-API_PASS = getpass()
-API_FMG_IP = ''
-API_FAZ_IP = ''
+API_FMG_IP = '10.215.17.123'
+API_FAZ_IP = '10.215.17.124'
 
 def time_frame(days):
     
@@ -29,7 +28,7 @@ class FmgApi:
         #self.fmg_values = self.json_data[fmg]
 
         managers = {"lab-fmg": API_FMG_IP}
-        logins = {"lab-fmg": (API_USER, API_PASS)}
+        logins = {"lab-fmg": (API_USER, getpass())}
         base_url = f'https://{managers[fmg]}/jsonrpc'
         self.client = HTTPclient(base_url)
         self.user = logins[fmg][0]
@@ -473,7 +472,7 @@ class FazApi:
         #self.fmg_values = self.json_data[fmg]
 
         managers = {"lab-faz": API_FAZ_IP}
-        logins = {"lab-faz": (API_USER, API_PASS)}
+        logins = {"lab-faz": (API_USER, getpass())}
         base_url = f'https://{managers[faz]}/jsonrpc'
         print(f'BASE URL:\n{base_url}\n')
         self.client = HTTPclient(base_url)
