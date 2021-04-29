@@ -1,8 +1,12 @@
+import setuptools
 from distutils.core import setup
 
-setup(
-    name = 'fortipyapi',
-    packages = ['fortipyapi'],
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name = 'fortinetapi',
+    packages = ['fortinetapi'],
     version = '0.1',  # Ideally should be same as your GitHub release tag varsion
     description = 'description',
     author = 'Todd Albiston',
