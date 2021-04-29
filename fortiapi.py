@@ -13,10 +13,10 @@ API_FAZ_IP = '10.215.17.124'
 def time_frame(days):
     
     dtnow = datetime.now()
-    dt24ago = dtnow - timedelta(days=days)
+    dtstart = dtnow - timedelta(days=days)
 
     strdtnow = dtnow.strftime("%Y-%m-%d %H:%M:%S")
-    strstart = dt24ago.strftime("%Y-%m-%d %H:%M:%S")
+    strstart = dtstart.strftime("%Y-%m-%d %H:%M:%S")
     
     return {'starttime': strstart, 'endtime': strdtnow}
 
