@@ -8,7 +8,7 @@ setup(
     author = 'Todd Albiston',
     author_email = 'foxtrot711@gmail.com',
     url = 'https://github.com/talbiston/fortinetapi',
-    download_url = 'download link you saved',
-    keywords = ['tag1', 'tag2'],
+    download_url = 'https://github.com/talbiston/fortinetapi/archive/refs/tags/0.1.tar.gz',
+    keywords = ['fortinet', 'Fortimanager', 'fortianalizer'],
     classifiers = [],
 )
